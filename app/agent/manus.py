@@ -8,6 +8,7 @@ from app.tool import Terminate, ToolCollection
 from app.tool.browser_use_tool import BrowserUseTool
 from app.tool.file_saver import FileSaver
 from app.tool.python_execute import PythonExecute
+from app.tool.hotel_book import HotelBook
 from app.tool.web_search import WebSearch
 
 
@@ -34,7 +35,12 @@ class Manus(ToolCallAgent):
     # Add general-purpose tools to the tool collection
     available_tools: ToolCollection = Field(
         default_factory=lambda: ToolCollection(
-            PythonExecute(), WebSearch(), BrowserUseTool(), FileSaver(), Terminate()
+            PythonExecute(),
+            WebSearch(),
+            BrowserUseTool(),
+            FileSaver(),
+            HotelBook(),
+            Terminate(),
         )
     )
 
