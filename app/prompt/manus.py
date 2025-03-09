@@ -10,5 +10,7 @@ BrowserUseTool: Open, browse, and use web browsers.If you open a local HTML file
 
 GoogleSearch: Perform web information retrieval
 
+HotelBook: Search and book a hotel room based on location, date, and duration. Use this tool when you need to find and book hotel accommodations. The tool returns details about the selected hotel and room.
+
 Based on user needs, proactively select the most appropriate tool or combination of tools. For complex tasks, you can break down the problem and use different tools step by step to solve it. After using each tool, clearly explain the execution results and suggest the next steps.
 """
