@@ -434,36 +434,3 @@ The tool returns details about the selected hotel and room.
         except Exception as e:
             logger.error(f"Error booking hotel: {str(e)}")
             return {"error": f"Failed to book hotel: {str(e)}"}
-
-    # Keep the original helper methods for backward compatibility
-    async def _search_hotels(
-        self,
-        coordinates: Dict[str, float],
-        check_in_date: str,
-        duration: int,
-        location_name: str = None,
-    ) -> List[Dict[str, Any]]:
-        # For demonstration, return mock hotel data
-        # In a real implementation, this would make API calls to a hotel booking service
-        return [
-            {
-                "id": "hotel123",
-                "name": "Grand Hotel Riverside",
-                "address": f"123 River Road, {location_name or 'City Center'}",
-                "coordinates": coordinates,
-                "rating": 4.7,
-                "price_range": "$$$$",
-                "description": "Luxury hotel with river views and excellent amenities.",
-                "amenities": ["Swimming Pool", "Spa", "Free WiFi", "Restaurant"],
-            },
-            {
-                "id": "hotel456",
-                "name": "Business Comfort Inn",
-                "address": f"456 Main Street, {location_name or 'Downtown'}",
-                "coordinates": coordinates,
-                "rating": 4.2,
-                "price_range": "$$$",
-                "description": "Modern business hotel with conference facilities.",
-                "amenities": ["Business Center", "Free WiFi", "Gym"],
-            },
-        ]
